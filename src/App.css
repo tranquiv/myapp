@@ -1,10 +1,11 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f9;
+  background-color: #ffffff;
+  color: #ffffff;
 }
 
 .App {
@@ -14,39 +15,43 @@ body {
 
 /* Estilos para los botones */
 button {
-  background-color: #4caf50;
+  background-color: #FF6F00;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #FF8F00;
   transform: scale(1.05);
 }
 
 button:disabled {
-  background-color: #d3d3d3;
+  background-color: #616161;
   cursor: not-allowed;
 }
 
 /* Input de texto */
 input {
-  padding: 10px;
+  padding: 12px;
   margin-right: 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
+  border: 2px solid #616161;
+  border-radius: 8px;
   font-size: 16px;
-  width: 200px;
+  width: 220px;
   transition: border-color 0.3s ease;
+  background-color: #424242;
+  color: white;
 }
 
 input:focus {
-  border-color: #4caf50;
+  border-color: #FF6F00;
   outline: none;
 }
 
@@ -57,41 +62,42 @@ ul {
 }
 
 li {
-  margin: 10px 0;
+  margin: 12px 0;
   text-align: left;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #424242;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 li button {
-  background-color: #f44336;
-  padding: 5px 10px;
-  border-radius: 3px;
+  background-color: #D32F2F;
+  padding: 6px 12px;
+  border-radius: 5px;
 }
 
 li button:hover {
-  background-color: #e53935;
+  background-color: #E53935;
 }
 
 /* Temporizador */
 .timer {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #FF6F00;
   margin-top: 20px;
 }
 
 /* Estilos para los títulos */
 h1, h3 {
-  color: #333;
-  font-size: 24px;
+  color: #FF6F00;
+  font-size: 26px;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -113,7 +119,7 @@ h3 {
 
 /* Estilo del fondo de la app */
 .App-header {
-  background-color: #282c34;
+  background-color: #333333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -125,7 +131,9 @@ h3 {
 
 /* Enlaces */
 .App-link {
-  color: #61dafb;
+  color: #FF6F00;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {
