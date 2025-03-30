@@ -6,6 +6,9 @@ import Form1 from './Views/Form1';
 import DownloadExcelButton from './Components/DownloadExcelButton';
 import DataView from './Views/DataView';
 import LogoutIcon  from '@mui/icons-material/Logout';
+import ojosAbiertos from "./images/ojosabiertos.png";
+import ojosCerrados from "./images/ojoscerrados.png";
+
 
 const users = [
   {
@@ -81,32 +84,64 @@ const Navigation = ({setUpdate}) => {
 };
 
 // Página de Login
-const Login = ({setUpdate}) => {
+const Login = ({ setUpdate }) => {
   const [pin, setPin] = useState('');
+  const [showPassword, setShowPassword] = useState(false);  // Estado para mostrar/ocultar contraseña
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    fakeAuth.login(pin, navigate, setUpdate); // Pasar `setUpdate` como argumento
+    fakeAuth.login(pin, navigate, setUpdate);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleLogin(); // Ejecuta login al presionar Enter
+    }
+  };
 
   return (
-      <div style={{ textAlign: 'center', marginTop: '100px'}}>
-        <h2>Iniciar Sesión</h2>
-        <TextField
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h2>Iniciar Sesión</h2>
+      
+      {/* Imagen centrada entre el título y la caja de texto */}
+      <img
+        src={showPassword ? ojosAbiertos : ojosCerrados}
+        alt="Ojos"
+        style={{
+          display: 'block',
+          margin: '20px auto',  // Centrado
+          width: '300px', // Tamaño de la imagen
+          height: '200px',
+        }}
+      />
+      
+      <TextField
         label="Ingrese su PIN"
         variant="outlined"
-        type="password"
+        type={showPassword ? 'text' : 'password'}  // Cambiar tipo de input según showPassword
         value={pin}
         onChange={(e) => setPin(e.target.value)}
-        inputProps={{maxLength: 5 }} // Limitar a 5 digitos
-        style={{marginBottom: '20px' }}
-        />
-        <br />
-        <Button variant="contained" color="primary" onClick={handleLogin}>
-          Ingresar
-        </Button>
-      </div>
+        onKeyDown={handleKeyDown} // Detecta Enter
+        inputProps={{ maxLength: 5 }}
+        style={{ marginBottom: '20px' }}
+      />
+      <br />
+      
+      {/* Botón para mostrar/ocultar la contraseña */}
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setShowPassword((prev) => !prev)} // Alternar el estado al hacer clic
+        style={{ marginBottom: '20px' }}
+      >
+        {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
+      </Button>
+      
+      <br />
+      <Button variant="contained" color="primary" onClick={handleLogin}>
+        Ingresar
+      </Button>
+    </div>
   );
 };
 

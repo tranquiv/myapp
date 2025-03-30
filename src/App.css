@@ -1,125 +1,20 @@
-/* Estilos generales */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  color: #ffffff;
-}
-
 .App {
   text-align: center;
-  padding: 20px;
 }
 
-/* Estilos para los botones */
-button {
-  background-color: #FF6F00;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: bold;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-  background-color: #FF8F00;
-  transform: scale(1.05);
-}
-
-button:disabled {
-  background-color: #616161;
-  cursor: not-allowed;
-}
-
-/* Input de texto */
-input {
-  padding: 12px;
-  margin-right: 10px;
-  border: 2px solid #616161;
-  border-radius: 8px;
-  font-size: 16px;
-  width: 220px;
-  transition: border-color 0.3s ease;
-  background-color: #424242;
-  color: white;
-}
-
-input:focus {
-  border-color: #FF6F00;
-  outline: none;
-}
-
-/* Listas y elementos dentro de la lista */
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin: 12px 0;
-  text-align: left;
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #424242;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-li button {
-  background-color: #D32F2F;
-  padding: 6px 12px;
-  border-radius: 5px;
-}
-
-li button:hover {
-  background-color: #E53935;
-}
-
-/* Temporizador */
-.timer {
-  font-size: 24px;
-  font-weight: bold;
-  color: #FF6F00;
-  margin-top: 20px;
-}
-
-/* Estilos para los títulos */
-h1, h3 {
-  color: #FF6F00;
-  font-size: 26px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 22px;
-}
-
-/* Animación y transición en el logo */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  transition: transform 1s ease;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
 }
 
-/* Estilo del fondo de la app */
 .App-header {
-  background-color: #333333;
+  background-color: #713074;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -129,11 +24,8 @@ h3 {
   color: white;
 }
 
-/* Enlaces */
 .App-link {
-  color: #FF6F00;
-  text-decoration: none;
-  font-weight: bold;
+  color: #11cfd6;
 }
 
 @keyframes App-logo-spin {
