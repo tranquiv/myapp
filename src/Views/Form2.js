@@ -25,7 +25,7 @@ import { doc, setDoc, deleteDoc } from 'firebase/firestore'; // Importa setDoc, 
 import DeleteIcon from '@mui/icons-material/Delete'; // Icono para el botón de eliminar
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 import html2pdf from 'html2pdf.js'; // Importar html2pdf
-import logo from '../assets/logo.png';
+import logo from '../images/logo.png';
 
 const Form2 = ({ selectedRow, userRole }) => {
   const [formData, setFormData] = useState({
